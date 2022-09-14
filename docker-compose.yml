@@ -15,7 +15,7 @@ services:
 
   web:
     build: .
-    command: bash -c 'python src/ccr_news/manage.py makemigrations && python src/ccr_news/manage.py migrate --noinput && python src/ccr_news/manage.py runserver 0.0.0.0:8000'
+    command: bash -c 'python src/ccr_news/manage.py migrate --noinput && python src/ccr_news/manage.py runserver 0.0.0.0:8000'
     volumes:
       - .:/code
     ports:
